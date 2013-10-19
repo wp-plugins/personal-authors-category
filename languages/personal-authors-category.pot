@@ -1,0 +1,113 @@
+# LANGUAGE (LOCALE) translation for WordPress.
+# Copyright (C) YEAR WordPress contributors.
+# This file is distributed under the same license as the WordPress package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-12-20 20:43-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: ALEXEY KNYAZEV <CONTACT@WEBDESIGNSEO.RU>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: personal-authors-category.php:81
+msgid "personal authors category"
+msgstr ""
+
+#: personal-authors-category.php:131
+msgid "user"
+msgstr ""
+
+#: personal-authors-category.php:131
+msgid "whith id"
+msgstr ""
+
+#: personal-authors-category.php:131
+msgid "added the category"
+msgstr ""
+
+#: personal-authors-category.php:146
+msgid "settings"
+msgstr ""
+
+#: personal-authors-category.php:191
+msgid "category format"
+msgstr ""
+
+#: personal-authors-category.php:194
+msgid "category format label"
+msgstr ""
+
+#: personal-authors-category.php:198
+msgid "select category"
+msgstr ""
+
+#: personal-authors-category.php:219
+msgid "checkbox label"
+msgstr ""
+
+#: personal-authors-category.php:222
+msgid "save"
+msgstr ""
+
+#: personal-authors-category.php:223
+msgid "add category old users"
+msgstr ""
+
+#: personal-authors-category.php:246
+msgid "donate"
+msgstr ""
+
+#: personal-authors-category.php:247
+msgid "donate message"
+msgstr ""
+
+#: personal-authors-category.php:248
+msgid "paypal"
+msgstr ""
+
+#: personal-authors-category.php:255
+msgid "webmoney"
+msgstr ""
+
+#: personal-authors-category.php:309
+msgid "donate name"
+msgstr ""
+
+#: personal-authors-category.php:312
+msgid "donate email"
+msgstr ""
+
+#: personal-authors-category.php:315
+msgid "donate web"
+msgstr ""
+
+#: personal-authors-category.php:318
+msgid "donate comment"
+msgstr ""
+
+#: personal-authors-category.php:321
+msgid "send donate"
+msgstr ""
+
+#: personal-authors-category.php:325
+msgid "yandex"
+msgstr ""
+
+#: personal-authors-category.php:327
+msgid "terms of use"
+msgstr ""
+
+#: personal-authors-category.php:328
+msgid "terms of use message"
+msgstr ""
+
+#: personal-authors-category.php:347
+msgid "metatitle"
+msgstr ""
