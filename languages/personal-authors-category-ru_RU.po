@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: personal-authors-category\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2004-12-20 20:43-0600\n"
-"PO-Revision-Date: 2013-10-17 16:24+0400\n"
+"PO-Revision-Date: 2013-10-19 17:05+0400\n"
 "Last-Translator: Алексей Князев <contact@webdesignseo.ru>\n"
 "Language-Team: http://webdesignseo.ru <contact@webdesignseo.ru>\n"
 "MIME-Version: 1.0\n"
@@ -86,35 +86,19 @@ msgstr "PayPal"
 msgid "webmoney"
 msgstr "webmoney R"
 
-#: personal-authors-category.php:309
-msgid "donate name"
-msgstr "Имя:"
+#: personal-authors-category.php:257
+msgid "wm message"
+msgstr "Сделать пожертвование посредством webmoney можно со страницы проекта"
 
-#: personal-authors-category.php:312
-msgid "donate email"
-msgstr "Email:"
-
-#: personal-authors-category.php:315
-msgid "donate web"
-msgstr "Сайт:"
-
-#: personal-authors-category.php:318
-msgid "donate comment"
-msgstr "Комментарий:"
-
-#: personal-authors-category.php:321
-msgid "send donate"
-msgstr "Отправить"
-
-#: personal-authors-category.php:325
+#: personal-authors-category.php:258
 msgid "yandex"
 msgstr "Яндекс деньги"
 
-#: personal-authors-category.php:327
+#: personal-authors-category.php:260
 msgid "terms of use"
 msgstr "Условия использования"
 
-#: personal-authors-category.php:328
+#: personal-authors-category.php:261
 msgid "terms of use message"
 msgstr ""
 "Хочу отметить, что мною не было отмечено никаких проблем в связи с работой "
@@ -128,6 +112,6 @@ msgstr ""
 "работе плагина и ни при каких обстоятельствах, я не несу ответственности за "
 "возможный ущерб, причинённый использованием данного плагина."
 
-#: personal-authors-category.php:347
+#: personal-authors-category.php:280
 msgid "metatitle"
 msgstr "Выберите одну рубрику"

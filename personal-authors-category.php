@@ -3,7 +3,7 @@
 *Plugin Name: personal-authors-category
 *Plugin URI: http://webdesignseo.ru/personal-authors-category
 *Description: The plugin automatically creates a new category for the new users in the categories specified by the administrator. Publish only the author can write in their categories.
-*Version: 1.0
+*Version: 0.2
 *Author: AlexeyKnyazev
 *Author URI: http://webdesignseo.ru
 */
@@ -250,74 +250,7 @@ if (!empty($_POST['personal_authors_category_cats'])) {
 </form>
 <h4><?php _e('webmoney','personal-authors-category'); ?></h4>
 <img src="http://webdesignseo.ru/wp-content/plugins/personal-authors-category/images/blue.gif" width="88" height="31" alt="" border="0">
-<script>
-
-      jQuery(document).ready(function(){
-
-        var options = {
-          beforeSubmit: function(data) {
-            jQuery("#limg").show();
-          },
-          success: function(data) {
-            jQuery("#limg").hide();
-            eval(data);
-          }
-        };
-
-        jQuery("#WpwmForm-1").ajaxForm(options);
-      });
-
-      function _wmButtonSwitch(s) {
-       var arr = new Array("b_classic", "b_light_rus", "b_light_eng");
-       for(var i=0; i < arr.length; i++) {
-         var el = document.getElementById(arr[i]);
-         if(el != null) {
-           el.style.display = "none";
-         }
-       }
-
-       var el = document.getElementById(s);
-       if(el != null) {
-         el.style.display = "";
-       }
-      }
-        var wp_webmoney_aPurses_1 = new Array("purse_1_0","purse_1_1");
-        function wp_webmoney_check_currency_1(el_id) {
-
-          for(var i=0; i<wp_webmoney_aPurses_1.length;i++) {
-            var el = document.getElementById(wp_webmoney_aPurses_1[i]);
-            if(el != null) {
-              el.style.display = (wp_webmoney_aPurses_1[i] == el_id?"":"none");
-            }
-          }
-        }</script>
-      <div>
-      <form id="WpwmForm-1" style="text-align: left; display: inline;" action="http://webdesignseo.ru/wp-content/plugins/wp-webmoney/pay.php?time=1381954669" method="post">
-
-      <span id="donor_error_field-1" style="color: #FF0000;"></span>
-
-      <span id="wpwm_form-1">
-       <br><span id="purse_1_0" ><input type="text" name="amount[0]" size="3" id="amount-1" value=""  /> <small>RUB</small></span><span id="purse_1_1" style="display:none;"><input type="text" name="amount[1]" size="3" id="amount-1" value=""  /> <small>USD</small></span><br><input type="radio" name="purse_type" value="0" checked="true" onclick="wp_webmoney_check_currency_1('purse_1_0');"> RUB&nbsp;<input type="radio" name="purse_type" value="1"  onclick="wp_webmoney_check_currency_1('purse_1_1');"> USD&nbsp;<br><input type="button" value="Сделать пожертвование" onclick="return _wpwmHideShow('wpwm_form-1','donor_form-1');">
-      </span>
-
-      <span id="donor_form-1" style="display: none;">
-
-      <label for="donor_name-1"><?php _e('donate name','personal-authors-category'); ?></label><br />
-			<input type="text" name="donor_name" id="donor_name-1" value="" /><br />
-
-			<label for="donor_email-1"><?php _e('donate email','personal-authors-category'); ?></label><br />
-			<input type="text" name="donor_email" id="donor_email-1" value="" /><br />
-
-			<label for="donor_site-1"><?php _e('donate web','personal-authors-category'); ?></label><br />
-			<input type="text" name="donor_site" id="donor_site-1" value="" /><br />
-
-			<label for="donor_comments-1"><?php _e('donate comment','personal-authors-category'); ?></label><br />
-			<textarea name="donor_comments" id="donor_comments-1"></textarea><br />
-
-			<input type="submit" name="wpwm_submit" value=<?php _e('send donate','personal-authors-category');?>> <img id="limg" src="http://webdesignseo.ru/wp-content/plugins/wp-webmoney/loading.gif" style="display: none;">
-			<input type="hidden" name="element_id" value="1" />
-      </span>
-      </form>
+<p><?php _e('wm message','personal-authors-category');?></p>
 <h4><?php _e('yandex','personal-authors-category');?></h4>
 <iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/embed/donate.xml?uid=410011502946954&amp;default-sum=&amp;targets=%D0%9D%D0%B0+%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D0%B5+%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD%D0%B0+personal-authors-category&amp;target-visibility=on&amp;project-name=Personal-Authors-Category+%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD+%D0%B4%D0%BB%D1%8F+wordpress&amp;project-site=http%3A%2F%2Fwebdesignseo.ru&amp;button-text=01&amp;comment=on&amp;hint=%D0%9F%D1%80%D0%B8+%D0%B6%D0%B5%D0%BB%D0%B0%D0%BD%D0%B8%D0%B8+%D0%BC%D0%BE%D0%B6%D0%B5%D1%82%D0%B5+%D0%B2%D0%B2%D0%B5%D1%81%D1%82%D0%B8+%D0%B7%D0%B4%D0%B5%D1%81%D1%8C+%D1%81%D0%B2%D0%BE%D0%B9+%D0%BA%D0%BE%D0%BC%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%80%D0%B8%D0%B9.+%D0%9E%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D0%B2+%D0%B0%D0%B4%D1%80%D0%B5%D1%81+%D1%81%D0%B2%D0%BE%D0%B5%D0%B3%D0%BE+%D1%81%D0%B0%D0%B9%D1%82%D0%B0%2C+%D0%BD%D0%B0%D0%B8%D0%B1%D0%BE%D0%BB%D0%B5%D0%B5+%D1%89%D0%B5%D0%B4%D1%80%D1%8B%D0%B5+%D0%B4%D0%B0%D1%80%D0%B8%D1%82%D0%B5%D0%BB%D0%B8+%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B0%D1%82+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5+%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B8+%D0%BD%D0%B0+%D1%81%D0%B2%D0%BE%D0%B9+%D1%81%D0%B0%D0%B9%D1%82+%D0%BD%D0%B0+%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC+%D0%B8%D0%B7+%D0%BD%D0%B0%D0%B8%D0%B1%D0%BE%D0%BB%D0%B5%D0%B5+%D0%BF%D0%BE%D0%B4%D1%85%D0%BE%D0%B4%D1%8F%D1%89%D0%B8%D1%85+%D0%BC%D0%BE%D0%B8%D1%85+%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BE%D0%B2.&amp;fio=on&amp;mail=on" width="450" height="233"></iframe>
 <h3><?php _e('terms of use','personal-authors-category');?></h3>

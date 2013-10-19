@@ -76,38 +76,22 @@ msgstr ""
 msgid "webmoney"
 msgstr ""
 
-#: personal-authors-category.php:309
-msgid "donate name"
+#: personal-authors-category.php:257
+msgid "wm message"
 msgstr ""
 
-#: personal-authors-category.php:312
-msgid "donate email"
-msgstr ""
-
-#: personal-authors-category.php:315
-msgid "donate web"
-msgstr ""
-
-#: personal-authors-category.php:318
-msgid "donate comment"
-msgstr ""
-
-#: personal-authors-category.php:321
-msgid "send donate"
-msgstr ""
-
-#: personal-authors-category.php:325
+#: personal-authors-category.php:258
 msgid "yandex"
 msgstr ""
 
-#: personal-authors-category.php:327
+#: personal-authors-category.php:260
 msgid "terms of use"
 msgstr ""
 
-#: personal-authors-category.php:328
+#: personal-authors-category.php:261
 msgid "terms of use message"
 msgstr ""
 
-#: personal-authors-category.php:347
+#: personal-authors-category.php:280
 msgid "metatitle"
-msgstr ""
+msgstr "Choose only one category"

@@ -24,5 +24,9 @@ No screenshots are available.
 
 == Changelog ==
 
+= 0.2 =
+
+Fixed block donations. Changed language files.
+
 = 0.1 =
 * Initial release
