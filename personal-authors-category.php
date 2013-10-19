@@ -2,7 +2,7 @@
 /*
 Plugin Name: personal-authors-category
 Plugin URI: http://webdesignseo.ru/personal-authors-category
-Description: При регистрации нового автора плагин автоматически создаёт для него рубрики в родительских рубриках, указанных администратором. Публиковать записи автор сможет только в своих рубриках.
+Description: The plugin automatically creates a new category for the new users in the categories specified by the administrator. Publish only the author can write in their categories.
 Author: AlexeyKnyazev
 Version: 1.0
 Author URI: http://webdesignseo.ru
