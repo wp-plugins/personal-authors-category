@@ -1,11 +1,11 @@
 <?php
-/*
-Plugin Name: personal-authors-category
-Plugin URI: http://webdesignseo.ru/personal-authors-category
-Description: The plugin automatically creates a new category for the new users in the categories specified by the administrator. Publish only the author can write in their categories.
-Author: AlexeyKnyazev
-Version: 1.0
-Author URI: http://webdesignseo.ru
+/**
+*Plugin Name: personal-authors-category
+*Plugin URI: http://webdesignseo.ru/personal-authors-category
+*Description: The plugin automatically creates a new category for the new users in the categories specified by the administrator. Publish only the author can write in their categories.
+*Version: 1.0
+*Author: AlexeyKnyazev
+*Author URI: http://webdesignseo.ru
 */
 
 add_action("init", "personal_authors_category_init");
