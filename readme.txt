@@ -20,7 +20,7 @@ The plugin automatically creates a new category for the new users in the categor
 
 == Screenshots ==
 
-No screenshots are available.
+1. Plugin settings.
 
 == Changelog ==
 
