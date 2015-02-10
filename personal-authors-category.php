@@ -3,7 +3,7 @@
 *Plugin Name: personal-authors-category
 *Plugin URI: http://webdesignseo.ru/personal-authors-category.html
 *Description: The plugin automatically creates a new category for the new users in the categories specified by the administrator. Publish only the author can write in their categories.
-*Version: 0.2
+*Version: 0.3
 *Author: AlexeyKnyazev
 *Author URI: http://webdesignseo.ru
 */
@@ -75,6 +75,16 @@ function authorcatreg_action($uid) {
   add_user_meta( $uid, "personal_authors_category_meta", $meta_value);
 }
 
+// Delete a category when delete user
+add_action( 'delete_user', 'authorcatdel_action' );
+function authorcatdel_action( $user_id ) {
+  $cats = unserialize(get_user_meta($user_id,'personal_authors_category_meta',true));
+  foreach ($cats as $term_id) {
+    wp_delete_term( $term_id, 'category' );
+  }
+}
+
+
  // Adds a new item to the menu of categories
 function personal_authors_category_add_admin_pages()
 {
@@ -83,7 +93,8 @@ function personal_authors_category_add_admin_pages()
 
 // Format in which category will be created for the author
 function personal_authors_category_register_new_user ()
-{require_once( ABSPATH . '/wp-admin/includes/taxonomy.php');
+{
+require_once( ABSPATH . '/wp-admin/includes/taxonomy.php');
   $catmass= array();
   foreach (unserialize(get_option('personal_authors_category_catname')) as $key => $value) {
       $catname = get_cat_name( $value );
@@ -97,7 +108,8 @@ function personal_authors_category_register_new_user ()
   }
   $meta_value=serialize($catmass);
   add_user_meta( $user_id, "personal_authors_category_meta", $meta_value);
-  add_action('register_post','personal_authors_category_register_new_user');}
+  add_action('register_post','personal_authors_category_register_new_user');
+}
 
 // Generates settings page
 function personal_authors_category_options_page()
@@ -167,7 +179,8 @@ if (!empty($_POST['personal_authors_category_cats'])) {
 	  float: right;
 	  margin: 0 8px;
 	}
-	.addoldusers {	background-color: #fc3;
+	.addoldusers {
+	background-color: #fc3;
 	margin: 15px;
 	padding: 7px;
 	border: 2px #fc3 solid;
@@ -176,7 +189,8 @@ if (!empty($_POST['personal_authors_category_cats'])) {
 	-moz-border-radius: 12px;
 	border-radius: 12px;
 	}
-	.divcheck {	width: auto;
+	.divcheck {
+	width: auto;
 	float: left;
 	clear: both;
 	}
@@ -249,7 +263,7 @@ if (!empty($_POST['personal_authors_category_cats'])) {
 <img alt="" border="0" src="https://www.paypalobjects.com/ru_RU/i/scr/pixel.gif" width="1" height="1">
 </form>
 <h4><?php _e('webmoney','personal-authors-category'); ?></h4>
-<img src="http://webdesignseo.ru/wp-content/plugins/personal-authors-category/images/blue.gif" width="88" height="31" alt="" border="0">
+<a href="http://webdesignseo.ru/donate.html"><img src="http://webdesignseo.ru/wp-content/plugins/personal-authors-category/images/blue.gif" width="88" height="31" alt="" border="0"></a>
 <p><?php _e('wm message','personal-authors-category');?></p>
 <h4><?php _e('yandex','personal-authors-category');?></h4>
 <iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/embed/donate.xml?uid=410011502946954&amp;default-sum=&amp;targets=%D0%9D%D0%B0+%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D0%B5+%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD%D0%B0+personal-authors-category&amp;target-visibility=on&amp;project-name=Personal-Authors-Category+%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD+%D0%B4%D0%BB%D1%8F+wordpress&amp;project-site=http%3A%2F%2Fwebdesignseo.ru&amp;button-text=01&amp;comment=on&amp;hint=%D0%9F%D1%80%D0%B8+%D0%B6%D0%B5%D0%BB%D0%B0%D0%BD%D0%B8%D0%B8+%D0%BC%D0%BE%D0%B6%D0%B5%D1%82%D0%B5+%D0%B2%D0%B2%D0%B5%D1%81%D1%82%D0%B8+%D0%B7%D0%B4%D0%B5%D1%81%D1%8C+%D1%81%D0%B2%D0%BE%D0%B9+%D0%BA%D0%BE%D0%BC%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%80%D0%B8%D0%B9.+%D0%9E%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D0%B2+%D0%B0%D0%B4%D1%80%D0%B5%D1%81+%D1%81%D0%B2%D0%BE%D0%B5%D0%B3%D0%BE+%D1%81%D0%B0%D0%B9%D1%82%D0%B0%2C+%D0%BD%D0%B0%D0%B8%D0%B1%D0%BE%D0%BB%D0%B5%D0%B5+%D1%89%D0%B5%D0%B4%D1%80%D1%8B%D0%B5+%D0%B4%D0%B0%D1%80%D0%B8%D1%82%D0%B5%D0%BB%D0%B8+%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B0%D1%82+%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5+%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B8+%D0%BD%D0%B0+%D1%81%D0%B2%D0%BE%D0%B9+%D1%81%D0%B0%D0%B9%D1%82+%D0%BD%D0%B0+%D0%BE%D0%B4%D0%BD%D0%BE%D0%BC+%D0%B8%D0%B7+%D0%BD%D0%B0%D0%B8%D0%B1%D0%BE%D0%BB%D0%B5%D0%B5+%D0%BF%D0%BE%D0%B4%D1%85%D0%BE%D0%B4%D1%8F%D1%89%D0%B8%D1%85+%D0%BC%D0%BE%D0%B8%D1%85+%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BE%D0%B2.&amp;fio=on&amp;mail=on" width="450" height="233"></iframe>
@@ -263,10 +277,14 @@ function apc_category() {
   global $current_user;
   get_currentuserinfo();
   $cats = unserialize(get_user_meta($current_user->ID,'personal_authors_category_meta',true));
-  foreach($cats as $cat ){
-    $c = get_category($cat);
-    echo '<label><input name="post_category[]" type="checkbox"'.$checked.' value="'.$c->term_id.'"> '.$c->name .'</label><br />';
+ $i=1;
+foreach($cats as $cat ){
+	$checked = ($i == 1) ? ' checked="checked"' : '';
+ 	$c = get_category($cat);
+	echo '<label><input name="post_category[]" type="radio"'.$checked.' value="'.$c->term_id.'"> '.$c->name .'</label><br />';
+	$i++;
 }
+unset($i);
 }
 
 // Displays a block with the personal categories user if the user is not an administrator.
